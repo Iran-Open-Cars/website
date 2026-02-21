@@ -1,6 +1,9 @@
 import Link from "next/link";
 import fs from "node:fs";
 import path from "node:path";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 type Manufacturer = { id: number; code: string | null; titles: Record<string, string> };
 
@@ -14,18 +17,34 @@ export default function ManufacturersPage() {
 
   return (
     <main className="container">
-      <section className="page-card">
-        <h1>Manufacturers</h1>
-        <ul className="data-list">
-          {manufacturers.map((m) => (
-            <li key={m.id}>
-              <Link href={`/manufacturers/${m.id}`}>
-                {m.titles["1"] ?? m.titles["2"] ?? m.code ?? `#${m.id}`}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <Breadcrumbs items={[{ href: "/", label: "خانه" }, { label: "سازندگان" }]} />
+      <Card>
+        <CardHeader>
+          <CardTitle>سازندگان</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>شناسه</TableHead>
+                <TableHead>نام</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {manufacturers.map((m) => (
+                <TableRow key={m.id}>
+                  <TableCell>{m.id}</TableCell>
+                  <TableCell>
+                    <Link href={`/manufacturers/${m.id}`}>
+                      {m.titles["1"] ?? m.titles["2"] ?? m.code ?? `#${m.id}`}
+                    </Link>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </CardContent>
+      </Card>
     </main>
   );
 }
