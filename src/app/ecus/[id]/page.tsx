@@ -7,7 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 type Ecu = {
   id: number;
-  manufacturerId: number;
+  manufacturerName: string | null;
   typeId: number | null;
   sortOrder: number | null;
   pinStateOrderRaw: string | null;
@@ -15,7 +15,7 @@ type Ecu = {
   titles: Record<string, string>;
 };
 
-type Cable = { id: number; name: string | null };
+type Cable = { id: number; description: string | null };
 
 function readJSON<T>(rel: string): T {
   const p = path.join(process.cwd(), "public", "data", rel);
@@ -67,7 +67,7 @@ export default async function EcuDetail({ params }: { params: Promise<{ id: stri
               {cableList.map((c) => (
                 <TableRow key={c.id}>
                   <TableCell>{c.id}</TableCell>
-                  <TableCell>{c.name ?? `Cable #${c.id}`}</TableCell>
+                  <TableCell>{c.description ?? `Cable #${c.id}`}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

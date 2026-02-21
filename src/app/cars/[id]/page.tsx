@@ -9,7 +9,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 type Car = { id: number; manufacturerId: number; modelCode: string | null; titles: Record<string, string> };
 type Ecu = {
   id: number;
-  manufacturerId: number;
+  manufacturerName: string | null;
   typeId: number | null;
   sortOrder: number | null;
   pinStateOrderRaw: string | null;
