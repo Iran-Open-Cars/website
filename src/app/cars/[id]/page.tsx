@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -23,19 +24,28 @@ export function generateStaticParams() {
   return cars.map((c) => ({ id: String(c.id) }));
 }
 
-export default function CarDetail({ params }: { params: { id: string } }) {
+export default async function CarDetail({ params }: { params: Promise<{ id: string }> }) {
   const cars = readJSON<Car[]>("cars.json");
   const ecus = readJSON<Ecu[]>("ecus.json");
   const ecusByCar = readJSON<Record<string, number[]>>("maps/ecus_by_car.json");
 
-  const carId = Number(params.id);
+  const { id } = await params;
+  const carId = Number(id);
+  if (!Number.isFinite(carId)) {
+    notFound();
+  }
+
   const car = cars.find((c) => c.id === carId);
+  if (!car) {
+    notFound();
+  }
+
   const ecuIds = ecusByCar[String(carId)] ?? [];
-  const ecuList = ecuIds.map((id) => ecus.find((e) => e.id === id)).filter(Boolean) as Ecu[];
+  const ecuList = ecuIds.map((ecuId) => ecus.find((e) => e.id === ecuId)).filter(Boolean) as Ecu[];
 
   return (
     <main style={{ padding: 24 }}>
-      <h1>{car?.titles["1"] ?? car?.titles["2"] ?? car?.modelCode ?? `Car #${carId}`}</h1>
+      <h1>{car.titles["1"] ?? car.titles["2"] ?? car.modelCode ?? `Car #${carId}`}</h1>
       <h2>ECUs</h2>
       <ul>
         {ecuList.map((e) => (
