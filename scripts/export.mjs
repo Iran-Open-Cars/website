@@ -138,7 +138,7 @@ function main() {
       `
       SELECT
         e.ID as id,
-        e.Manufacturer as manufacturerId,
+        e.Manufacturer as manufacturerName,
         e.Type as typeId,
         e."Order" as sortOrder,
         e.PIN_State_Order as pinStateOrder,
@@ -155,7 +155,7 @@ function main() {
   for (const r of ecusRaw) {
     const ecu = ecusMap.get(r.id) ?? {
       id: r.id,
-      manufacturerId: r.manufacturerId ?? null,
+      manufacturerName: r.manufacturerName ?? null,
       typeId: r.typeId ?? null,
       sortOrder: r.sortOrder ?? null,
       pinStateOrderRaw: r.pinStateOrder ?? null,
