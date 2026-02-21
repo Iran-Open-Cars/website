@@ -185,3 +185,71 @@ a:hover {
 .table-row:hover {
   background: color-mix(in srgb, var(--card), var(--foreground) 3%);
 }
+
+.search-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 460px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--foreground);
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+}
+
+.search-input:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 1px;
+}
+
+.manufacturer-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.manufacturer-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.95rem;
+  color: var(--foreground);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--foreground), transparent 93%);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.manufacturer-card:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--link), var(--border) 35%);
+}
+
+.manufacturer-id {
+  display: inline-block;
+  color: var(--muted-foreground);
+  font-size: 0.86rem;
+  margin-bottom: 0.4rem;
+}
+
+.manufacturer-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.manufacturer-card p {
+  margin: 0.45rem 0 0;
+  color: var(--muted-foreground);
+  font-size: 0.92rem;
+}
+
+.empty-state {
+  margin: 0;
+  color: var(--muted-foreground);
+}
