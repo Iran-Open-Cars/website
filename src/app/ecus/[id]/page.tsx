@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -23,31 +24,40 @@ export function generateStaticParams() {
   return ecus.map((e) => ({ id: String(e.id) }));
 }
 
-export default function EcuDetail({ params }: { params: { id: string } }) {
+export default async function EcuDetail({ params }: { params: Promise<{ id: string }> }) {
   const ecus = readJSON<Ecu[]>("ecus.json");
   const cables = readJSON<Cable[]>("cables.json");
   const cablesByEcu = readJSON<Record<string, number[]>>("maps/cables_by_ecu.json");
 
-  const ecuId = Number(params.id);
+  const { id } = await params;
+  const ecuId = Number(id);
+  if (!Number.isFinite(ecuId)) {
+    notFound();
+  }
+
   const ecu = ecus.find((e) => e.id === ecuId);
+  if (!ecu) {
+    notFound();
+  }
+
   const cableIds = cablesByEcu[String(ecuId)] ?? [];
-  const cableList = cableIds.map((id) => cables.find((c) => c.id === id)).filter(Boolean) as Cable[];
+  const cableList = cableIds.map((cableId) => cables.find((c) => c.id === cableId)).filter(Boolean) as Cable[];
 
   return (
-    <main style={{ padding: 24 }}>
-      <h1>{ecu?.titles["1"] ?? ecu?.titles["2"] ?? `ECU #${ecuId}`}</h1>
+    <main className="container">
+      <section className="page-card">
+        <h1>{ecu.titles["1"] ?? ecu.titles["2"] ?? `ECU #${ecuId}`}</h1>
 
-      <h2>PIN_State_Order</h2>
-      <pre style={{ background: "#f3f3f3", padding: 12, overflowX: "auto" }}>
-        {JSON.stringify(ecu?.pinStateOrder ?? [], null, 2)}
-      </pre>
+        <h2 className="section-title">PIN_State_Order</h2>
+        <pre className="code-block">{JSON.stringify(ecu.pinStateOrder ?? [], null, 2)}</pre>
 
-      <h2>Cables</h2>
-      <ul>
-        {cableList.map((c) => (
-          <li key={c.id}>{c.name ?? `Cable #${c.id}`}</li>
-        ))}
-      </ul>
+        <h2 className="section-title">Cables</h2>
+        <ul className="data-list">
+          {cableList.map((c) => (
+            <li key={c.id}>{c.name ?? `Cable #${c.id}`}</li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }

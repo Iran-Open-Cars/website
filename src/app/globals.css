@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f7fb;
+  --foreground: #111827;
+  --muted-foreground: #4b5563;
+  --card: #ffffff;
+  --border: #dbe2ea;
+  --link: #1d4ed8;
 }
 
 @theme inline {
@@ -14,13 +18,71 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #e5e7eb;
+    --muted-foreground: #9ca3af;
+    --card: #111827;
+    --border: #1f2937;
+    --link: #93c5fd;
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: var(--background);
+  margin: 0;
+  background: radial-gradient(circle at top, color-mix(in srgb, var(--background), #ffffff 8%) 0%, var(--background) 70%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.page-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 24px color-mix(in srgb, var(--foreground), transparent 92%);
+}
+
+.page-card h1 {
+  margin-top: 0;
+}
+
+.muted {
+  color: var(--muted-foreground);
+}
+
+.data-list {
+  padding-left: 1.1rem;
+  line-height: 1.7;
+}
+
+.section-title {
+  margin: 1.5rem 0 0.75rem;
+}
+
+.code-block {
+  margin: 0;
+  background: color-mix(in srgb, var(--card), var(--foreground) 7%);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  overflow-x: auto;
 }

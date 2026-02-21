@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -15,27 +16,38 @@ export function generateStaticParams() {
   return manufacturers.map((m) => ({ id: String(m.id) }));
 }
 
-export default function ManufacturerDetail({ params }: { params: { id: string } }) {
+export default async function ManufacturerDetail({ params }: { params: Promise<{ id: string }> }) {
   const manufacturers = readJSON<Manufacturer[]>("manufacturers.json");
   const cars = readJSON<Car[]>("cars.json");
 
-  const id = Number(params.id);
-  const m = manufacturers.find((x) => x.id === id);
-  const carsOfM = cars.filter((c) => c.manufacturerId === id);
+  const { id } = await params;
+  const manufacturerId = Number(id);
+  if (!Number.isFinite(manufacturerId)) {
+    notFound();
+  }
+
+  const manufacturer = manufacturers.find((x) => x.id === manufacturerId);
+  if (!manufacturer) {
+    notFound();
+  }
+
+  const carsOfManufacturer = cars.filter((c) => c.manufacturerId === manufacturerId);
 
   return (
-    <main style={{ padding: 24 }}>
-      <h1>{m?.titles["1"] ?? m?.titles["2"] ?? m?.code ?? `Manufacturer #${id}`}</h1>
-      <h2>Cars</h2>
-      <ul>
-        {carsOfM.map((c) => (
-          <li key={c.id}>
-            <Link href={`/cars/${c.id}`}>
-              {c.titles["1"] ?? c.titles["2"] ?? c.modelCode ?? `Car #${c.id}`}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <main className="container">
+      <section className="page-card">
+        <h1>{manufacturer.titles["1"] ?? manufacturer.titles["2"] ?? manufacturer.code ?? `Manufacturer #${manufacturerId}`}</h1>
+        <h2 className="section-title">Cars</h2>
+        <ul className="data-list">
+          {carsOfManufacturer.map((car) => (
+            <li key={car.id}>
+              <Link href={`/cars/${car.id}`}>
+                {car.titles["1"] ?? car.titles["2"] ?? car.modelCode ?? `Car #${car.id}`}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }

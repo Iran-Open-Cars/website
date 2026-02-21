@@ -44,18 +44,20 @@ export default async function CarDetail({ params }: { params: Promise<{ id: stri
   const ecuList = ecuIds.map((ecuId) => ecus.find((e) => e.id === ecuId)).filter(Boolean) as Ecu[];
 
   return (
-    <main style={{ padding: 24 }}>
-      <h1>{car.titles["1"] ?? car.titles["2"] ?? car.modelCode ?? `Car #${carId}`}</h1>
-      <h2>ECUs</h2>
-      <ul>
-        {ecuList.map((e) => (
-          <li key={e.id}>
-            <Link href={`/ecus/${e.id}`}>
-              {e.titles["1"] ?? e.titles["2"] ?? `ECU #${e.id}`}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <main className="container">
+      <section className="page-card">
+        <h1>{car.titles["1"] ?? car.titles["2"] ?? car.modelCode ?? `Car #${carId}`}</h1>
+        <h2 className="section-title">ECUs</h2>
+        <ul className="data-list">
+          {ecuList.map((ecu) => (
+            <li key={ecu.id}>
+              <Link href={`/ecus/${ecu.id}`}>
+                {ecu.titles["1"] ?? ecu.titles["2"] ?? `ECU #${ecu.id}`}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }

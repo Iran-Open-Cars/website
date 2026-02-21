@@ -13,17 +13,19 @@ export default function ManufacturersPage() {
   const manufacturers = readJSON<Manufacturer[]>("manufacturers.json");
 
   return (
-    <main style={{ padding: 24 }}>
-      <h1>Manufacturers</h1>
-      <ul>
-        {manufacturers.map((m) => (
-          <li key={m.id}>
-            <Link href={`/manufacturers/${m.id}`}>
-              {m.titles["1"] ?? m.titles["2"] ?? m.code ?? `#${m.id}`}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <main className="container">
+      <section className="page-card">
+        <h1>Manufacturers</h1>
+        <ul className="data-list">
+          {manufacturers.map((m) => (
+            <li key={m.id}>
+              <Link href={`/manufacturers/${m.id}`}>
+                {m.titles["1"] ?? m.titles["2"] ?? m.code ?? `#${m.id}`}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }
