@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
 import fs from "node:fs";
 import path from "node:path";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 type Ecu = {
   id: number;
@@ -40,24 +43,37 @@ export default async function EcuDetail({ params }: { params: Promise<{ id: stri
     notFound();
   }
 
+  const ecuName = ecu.titles["1"] ?? ecu.titles["2"] ?? `ECU #${ecuId}`;
   const cableIds = cablesByEcu[String(ecuId)] ?? [];
   const cableList = cableIds.map((cableId) => cables.find((c) => c.id === cableId)).filter(Boolean) as Cable[];
 
   return (
     <main className="container">
-      <section className="page-card">
-        <h1>{ecu.titles["1"] ?? ecu.titles["2"] ?? `ECU #${ecuId}`}</h1>
-
-        <h2 className="section-title">PIN_State_Order</h2>
-        <pre className="code-block">{JSON.stringify(ecu.pinStateOrder ?? [], null, 2)}</pre>
-
-        <h2 className="section-title">Cables</h2>
-        <ul className="data-list">
-          {cableList.map((c) => (
-            <li key={c.id}>{c.name ?? `Cable #${c.id}`}</li>
-          ))}
-        </ul>
-      </section>
+      <Breadcrumbs items={[{ href: "/", label: "خانه" }, { href: "/cars", label: "خودروها" }, { label: ecuName }]} />
+      <Card>
+        <CardHeader>
+          <CardTitle>{ecuName}</CardTitle>
+          <CardDescription>ترتیب پین‌ها: {ecu.pinStateOrder.join("، ") || "-"}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>شناسه کابل</TableHead>
+                <TableHead>نام کابل</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {cableList.map((c) => (
+                <TableRow key={c.id}>
+                  <TableCell>{c.id}</TableCell>
+                  <TableCell>{c.name ?? `Cable #${c.id}`}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </CardContent>
+      </Card>
     </main>
   );
 }
