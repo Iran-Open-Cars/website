@@ -1,0 +1,12 @@
+{
+  "exportedAt": "2026-02-21T10:26:16.614Z",
+  "counts": {
+    "manufacturers": 187,
+    "cars": 1020,
+    "ecus": 1877,
+    "ecuTypes": 26,
+    "cables": 86,
+    "carEcuLinks": 4561,
+    "ecuCableLinks": 3381
+  }
+}

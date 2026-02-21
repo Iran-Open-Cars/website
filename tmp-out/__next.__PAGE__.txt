@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[14448,["/_next/static/chunks/0cf72d49d3a3d3d0.js"],""]
+3:I[37697,["/_next/static/chunks/95251a55af1c97c9.js","/_next/static/chunks/f65846343a8f39e2.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"VaercCLugExYuphoDFOUm","rsc":["$","$1","c",{"children":[["$","main",null,{"style":{"padding":24},"children":[["$","h1",null,{"children":"ECU Database"}],["$","ul",null,{"children":["$","li",null,{"children":["$","$L2",null,{"href":"/manufacturers","children":"Manufacturers"}]}]}],["$","p",null,{"style":{"opacity":0.7},"children":"Data is served statically from /public/data"}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/0cf72d49d3a3d3d0.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
