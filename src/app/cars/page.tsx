@@ -13,17 +13,19 @@ export default function CarsPage() {
   const cars = readJSON<Car[]>("cars.json");
 
   return (
-    <main style={{ padding: 24 }}>
-      <h1>Cars</h1>
-      <ul>
-        {cars.map((car) => (
-          <li key={car.id}>
-            <Link href={`/cars/${car.id}`}>
-              {car.titles["1"] ?? car.titles["2"] ?? car.modelCode ?? `#${car.id}`}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <main className="container">
+      <section className="page-card">
+        <h1>Cars</h1>
+        <ul className="data-list">
+          {cars.map((car) => (
+            <li key={car.id}>
+              <Link href={`/cars/${car.id}`}>
+                {car.titles["1"] ?? car.titles["2"] ?? car.modelCode ?? `#${car.id}`}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }
