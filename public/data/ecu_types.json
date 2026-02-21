@@ -1,0 +1,232 @@
+[
+  {
+    "id": 0,
+    "code": "Uncategorized",
+    "sortOrder": 0,
+    "grouping": -1,
+    "titles": {
+      "1": "متفرقه",
+      "2": "Uncategorized"
+    }
+  },
+  {
+    "id": 1,
+    "code": "Engine",
+    "sortOrder": 1,
+    "grouping": -1,
+    "titles": {
+      "1": "موتور",
+      "2": "Engine"
+    }
+  },
+  {
+    "id": 2,
+    "code": "Gas",
+    "sortOrder": 2,
+    "grouping": -1,
+    "titles": {
+      "1": "گازسوز",
+      "2": "Gas"
+    }
+  },
+  {
+    "id": 3,
+    "code": "OtherEquipments",
+    "sortOrder": 3,
+    "grouping": -1,
+    "titles": {
+      "1": "سایر تجهیزات",
+      "2": "Other Equipments"
+    }
+  },
+  {
+    "id": 4,
+    "code": "Flash(Reset)",
+    "sortOrder": 4,
+    "grouping": -1,
+    "titles": {
+      "1": "ریست ECU",
+      "2": "Flash (Reset)"
+    }
+  },
+  {
+    "id": 5,
+    "code": "Downloads",
+    "sortOrder": 5,
+    "grouping": -1,
+    "titles": {
+      "1": "دانلود",
+      "2": "Download"
+    }
+  },
+  {
+    "id": 6,
+    "code": "ABS",
+    "sortOrder": 6,
+    "grouping": 3,
+    "titles": {
+      "1": "ترمز ضد قفل",
+      "2": "ABS"
+    }
+  },
+  {
+    "id": 7,
+    "code": "AirBag",
+    "sortOrder": 7,
+    "grouping": 3,
+    "titles": {
+      "1": "کیسه هوا",
+      "2": "AirBag"
+    }
+  },
+  {
+    "id": 8,
+    "code": "Equipments",
+    "sortOrder": 8,
+    "grouping": 3,
+    "titles": {
+      "1": "تجهیزات",
+      "2": "Equipments"
+    }
+  },
+  {
+    "id": 9,
+    "code": "Immobilizer",
+    "sortOrder": 9,
+    "grouping": 3,
+    "titles": {
+      "1": "سیستم ضد سرقت",
+      "2": "Immobilizer"
+    }
+  },
+  {
+    "id": 10,
+    "code": "AT",
+    "sortOrder": 10,
+    "grouping": -1,
+    "titles": {
+      "1": "گیربکس اتوماتیک",
+      "2": "AT"
+    }
+  },
+  {
+    "id": 11,
+    "code": "BCM",
+    "sortOrder": 11,
+    "grouping": -1,
+    "titles": {
+      "1": "تجهیزات بدنه",
+      "2": "BCM"
+    }
+  },
+  {
+    "id": 12,
+    "code": "AC",
+    "sortOrder": 12,
+    "grouping": -1,
+    "titles": {
+      "1": "تهویه مطبوع",
+      "2": "AC"
+    }
+  },
+  {
+    "id": 13,
+    "code": "Multiplex",
+    "sortOrder": 13,
+    "grouping": -1,
+    "titles": {
+      "1": "مالتی پلکس",
+      "2": "Multiplex"
+    }
+  },
+  {
+    "id": 14,
+    "code": "Convert",
+    "sortOrder": 14,
+    "grouping": -1,
+    "titles": {
+      "1": "تبدیل",
+      "2": "Convert"
+    }
+  },
+  {
+    "id": 15,
+    "code": "Cruise",
+    "sortOrder": 15,
+    "grouping": -1,
+    "titles": {
+      "1": "Cruise",
+      "2": "کروز کنترل"
+    }
+  },
+  {
+    "id": 16,
+    "code": "ECU_Programming",
+    "sortOrder": 16,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 17,
+    "code": "ABS_Programming",
+    "sortOrder": 17,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 18,
+    "code": "AirBag_Programming",
+    "sortOrder": 18,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 19,
+    "code": "TCU_Programming",
+    "sortOrder": 19,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 20,
+    "code": "BCM_Programming",
+    "sortOrder": 20,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 21,
+    "code": "Multiplex_Programming",
+    "sortOrder": 21,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 22,
+    "code": "ICN_Programming",
+    "sortOrder": 22,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 23,
+    "code": "Immobilizer_Programming",
+    "sortOrder": 23,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 24,
+    "code": "Remap",
+    "sortOrder": 24,
+    "grouping": -1,
+    "titles": {}
+  },
+  {
+    "id": 25,
+    "code": "AutoDetection",
+    "sortOrder": 25,
+    "grouping": -1,
+    "titles": {}
+  }
+]

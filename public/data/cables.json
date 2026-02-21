@@ -1,0 +1,432 @@
+[
+  {
+    "id": 1,
+    "description": "MAXIMA",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 2,
+    "description": "SL96",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 3,
+    "description": "Nissan Pickup",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 4,
+    "description": "Mazda 2000",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 5,
+    "description": "Peugeot 206",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 6,
+    "description": "Xantia",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 7,
+    "description": "RIO",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 14,
+    "description": "تبدیل USB به COM",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 15,
+    "description": " پراید CNG",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 16,
+    "description": "Landi Renzo",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 17,
+    "description": "OMVL",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 18,
+    "description": "CNG Zamyad",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 19,
+    "description": "CNG Shahab",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 20,
+    "description": "CNG Lovato",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 28,
+    "description": " Istana",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 29,
+    "description": " Delica",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 36,
+    "description": "Mazda3",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 37,
+    "description": "Daewoo",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 53,
+    "description": "OMVL+Prins",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 55,
+    "description": "Varesh Gostar",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 56,
+    "description": "Runna",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 60,
+    "description": "رابط 3 متری",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 61,
+    "description": "Ssangyang",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 62,
+    "description": "S300",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 65,
+    "description": "Multi CAN",
+    "hardwareTypeIds": "3"
+  },
+  {
+    "id": 67,
+    "description": "Main Cable",
+    "hardwareTypeIds": "4$5$6$7$13$27$28$29"
+  },
+  {
+    "id": 69,
+    "description": "Cable 12 Volt",
+    "hardwareTypeIds": "3$4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 70,
+    "description": "General CNG",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 71,
+    "description": "AD-2P",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 73,
+    "description": "Nissan",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 74,
+    "description": "Mazda",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 75,
+    "description": "RKA-KIA",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 76,
+    "description": "Daewoo",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 80,
+    "description": "RK-AD1",
+    "hardwareTypeIds": "4$5$6$7$13$23$24"
+  },
+  {
+    "id": 81,
+    "description": "RK-AD3",
+    "hardwareTypeIds": "4$5$6$7$13$23$24"
+  },
+  {
+    "id": 82,
+    "description": "General CNG$Zamyad CNG",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 83,
+    "description": "General CNG$Saipa CNG",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 84,
+    "description": "General CNG$Landirenzo",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 85,
+    "description": "General CNG$Lovato",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 86,
+    "description": "General CNG$Shahab",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27"
+  },
+  {
+    "id": 87,
+    "description": "General CNG$OMVL",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27"
+  },
+  {
+    "id": 94,
+    "description": "scope probe",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 95,
+    "description": "RK-MC1",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 96,
+    "description": "RK-MC2",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 97,
+    "description": "RK-MC3",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 98,
+    "description": "RK-MC4",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 99,
+    "description": "RK-MC5",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 100,
+    "description": "HY-KIA (RK-AD4)",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 101,
+    "description": "RK-AD5",
+    "hardwareTypeIds": "4$5$6$7$13$23$24"
+  },
+  {
+    "id": 102,
+    "description": "Kwasaki_3P_MC6",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 103,
+    "description": "Kwasaki_4P_MC6",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 104,
+    "description": "Kwasaki_6P_MC6",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 105,
+    "description": "Suzuki_I_MC7",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 106,
+    "description": "Suzuki_III_MC8",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 107,
+    "description": "Honda_MC9",
+    "hardwareTypeIds": "4$5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 108,
+    "description": "R-BN1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 109,
+    "description": "R-SY1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 110,
+    "description": "R-SZ3",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 111,
+    "description": "R-PG1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 112,
+    "description": "R-PG2",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 113,
+    "description": "R-MK1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 114,
+    "description": "R-KY1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 115,
+    "description": "R-KW6",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 116,
+    "description": "R-KW5",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 117,
+    "description": "R-KW4",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 118,
+    "description": "R-KW3",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 119,
+    "description": "R-KW1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 120,
+    "description": "R-IN1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 121,
+    "description": "R-HF1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 122,
+    "description": "R-HR1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 123,
+    "description": "R-HR2",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 124,
+    "description": "R-BO1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 125,
+    "description": "R-BM1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 126,
+    "description": "R-HS1$H4",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 127,
+    "description": "R-HS1$H6",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 128,
+    "description": "R-DU1$D4",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 129,
+    "description": "R-DU1$D3",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 130,
+    "description": "R-SZ2",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 131,
+    "description": "R-KW2$K4",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 132,
+    "description": "R-KW2$K6",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 133,
+    "description": "R-YA1$YT4",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 134,
+    "description": "R-YA1$YT3M",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 135,
+    "description": "R-YA1$YT3F",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 136,
+    "description": "R-YA1$YT2",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 137,
+    "description": "R-BJ1",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  },
+  {
+    "id": 138,
+    "description": "Lifan-EU4",
+    "hardwareTypeIds": "5$6$7$13$14$23$24$27$28$29"
+  }
+]
