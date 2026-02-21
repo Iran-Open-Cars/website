@@ -6,6 +6,7 @@ export default function Home() {
       <h1>ECU Database</h1>
       <ul>
         <li><Link href="/manufacturers">Manufacturers</Link></li>
+        <li><Link href="/cars">Cars</Link></li>
       </ul>
       <p style={{ opacity: 0.7 }}>Data is served statically from /public/data</p>
     </main>
